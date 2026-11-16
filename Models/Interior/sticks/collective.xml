@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<!-- for UH-60 HD -->
+ 
+ 
+
+    
+    <path>collective.ac</path>
+	
+	<model>
+		<name>starter</name>
+		<path>Aircraft/hughes500/Instruments/Switch/starter.xml</path>
+		<offsets>
+				
+			<x-m>-0.33</x-m>
+			<y-m>0.034</y-m>
+			<z-m>0.18</z-m>
+			<heading-deg>90</heading-deg>
+		</offsets>
+		
+	</model>
+	
+	<model>
+		<name>stop</name>
+		<path>Aircraft/hughes500/Instruments/Switch/stop-idle.xml</path>
+		<offsets>
+				
+			<x-m>-0.286</x-m>
+			<y-m>-0.009</y-m>
+			<z-m>0.18</z-m>
+			<pitch-deg>-70</pitch-deg>
+		</offsets>
+		
+	</model>
+ 
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>BJ_LOD_100</object-name>
+	<object-name>stop</object-name>
+	<object-name>starter</object-name>
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor> -20</factor>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+<effect>
+   <inherits-from>Aircraft/hughes500/Models/Effects/md500-interior</inherits-from>
+     
+     <object-name>BJ_LOD_100</object-name>
+     
+     		   
+ </effect>
+
+
+</PropertyList>
+

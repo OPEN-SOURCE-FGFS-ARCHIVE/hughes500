@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Utility Helicopters Inc.</name>
+     <texture-fuselage>liveries/UHI/MD500_1_t.jpg</texture-fuselage>
+     <texture-tail>liveries/UHI/MD500_3_t.jpg</texture-tail>
+	 <texture-rotor>liveries/UHI/main rotor still.jpg</texture-rotor>
+	 <texture-tailrotor>liveries/UHI/tail rotor still.jpg</texture-tailrotor>
+     <texture-seat>liveries/UHI/Seat.jpg</texture-seat>
+	 <texture-skids>liveries/UHI/skids.jpg</texture-skids>
+	 <texture-dome>liveries/UHI/RotorDome_t.jpg</texture-dome>
+   
+
+      </livery>
+	   <bo105>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.28</refl_correction>
+	<fresnel-factor>0.4</fresnel-factor>
+    </rendering>
+  </sim>
+
+</PropertyList>

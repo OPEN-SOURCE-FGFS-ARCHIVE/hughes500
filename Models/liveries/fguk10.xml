@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">FGUK 10 years</name>
+     <texture-fuselage>liveries/fguk10/MD500_1_t.jpg</texture-fuselage>
+     <texture-tail>liveries/fguk10/MD500_3_t.jpg</texture-tail>
+	 <texture-rotor>liveries/fguk10/main rotor still.jpg</texture-rotor>
+	 <texture-tailrotor>liveries/fguk10/tail rotor still.jpg</texture-tailrotor>
+     <texture-seat>liveries/fguk10/Seat.jpg</texture-seat>
+	 <texture-skids>liveries/fguk10/skids.jpg</texture-skids>
+	 <texture-dome>liveries/fguk10/RotorDome_t.jpg</texture-dome>
+   
+
+      </livery>
+	   <bo105>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.22</refl_correction>
+	<fresnel-factor>0.4</fresnel-factor>
+    </rendering>
+  </sim>
+
+</PropertyList>

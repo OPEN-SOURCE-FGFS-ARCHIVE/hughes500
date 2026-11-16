@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<!-- Airspeed indicator -->
+
+<PropertyList>
+
+	<path>yawstring.ac</path>
+	
+<!--
+	<animation>
+		<type>rotate</type>
+		<object-name>string</object-name>
+		<property>instrumentation/yawstring</property>
+		<center>
+			<x-m>-0.061937</x-m>
+			<y-m>0.0002164490</y-m>
+			<z-m>-0.000239909</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+	-->
+	
+	 <animation>
+  <type>texrotate</type>
+  <object-name>string</object-name>
+  <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+  <factor>4</factor>
+  <center>
+   <x>0.5</x>
+   <y>0.5</y>
+   <z>0.5</z>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+	
+	
+	<!-- *** LoD *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>40</max-m>
+	</animation>
+
+</PropertyList>

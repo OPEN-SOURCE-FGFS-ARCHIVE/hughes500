@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Default - Royal Canadian Mounted Police</name>
+     <texture-fuselage>liveries/default/MD500_1_t.jpg</texture-fuselage>
+     <texture-tail>liveries/default/MD500_3_t.jpg</texture-tail>
+	 <texture-rotor>liveries/default/main rotor still.jpg</texture-rotor>
+	 <texture-tailrotor>liveries/default/tail rotor still.jpg</texture-tailrotor>
+     <texture-seat>liveries/default/Seat.jpg</texture-seat>
+	 <texture-skids>liveries/default/skids.jpg</texture-skids>
+	 <texture-dome>liveries/default/RotorDome_t.jpg</texture-dome>
+ 
+
+      </livery>
+	   <bo105>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.25</refl_correction>
+	<fresnel-factor>0.4</fresnel-factor>
+    </rendering>
+  </sim>
+
+</PropertyList>

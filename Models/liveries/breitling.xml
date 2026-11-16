@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Breitling</name>
+     <texture-fuselage>liveries/breitling/MD500_1_t.jpg</texture-fuselage>
+     <texture-tail>liveries/breitling/MD500_3_t.jpg</texture-tail>
+	 <texture-rotor>liveries/FGUK/main rotor still.jpg</texture-rotor>
+	 <texture-tailrotor>liveries/FGUK/tail rotor still.jpg</texture-tailrotor>
+     <texture-seat>liveries/FGUK/Seat.jpg</texture-seat>
+	 <texture-skids>liveries/breitling/skids.jpg</texture-skids>
+	 <texture-dome>liveries/breitling/RotorDome_t.jpg</texture-dome>
+  
+
+      </livery>
+	   <bo105>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.21</refl_correction>
+	<fresnel-factor>0.6</fresnel-factor>
+    </rendering>
+  </sim>
+
+</PropertyList>

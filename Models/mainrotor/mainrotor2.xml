@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+		<path>hub.ac</path>
+
+<!-- blades -->
+		
+		<model>
+        <name>blade1</name>
+        <path>b1.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+       <heading-deg>30</heading-deg>
+	  </offsets>
+      
+    </model>	
+	
+	
+	<model>
+        <name>blade2</name>
+        <path>b2.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+       <heading-deg>105</heading-deg>
+	  </offsets>
+      
+    </model>	
+	
+	<model>
+        <name>blade3</name>
+        <path>b3.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+       <heading-deg>180</heading-deg>
+	  </offsets>
+      
+    </model>	
+	
+	<model>
+        <name>blade4</name>
+        <path>b4.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+       <heading-deg>250</heading-deg>
+	  </offsets>
+      
+    </model>	
+	
+		<model>
+        <name>blade5</name>
+        <path>b5.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+       <heading-deg>320</heading-deg>
+	  </offsets>
+      
+    </model>	
+		
+	<effect>
+	    
+		<inherits-from>Aircraft/hughes500/Models/Effects/reflect-uber</inherits-from>
+
+	  	 <object-name>dome</object-name>
+	  
+	</effect>
+	
+	<animation>
+	<name>rotorcomplete</name>
+	 <object-name>dome</object-name>
+		 <object-name>rods</object-name>
+        <object-name>blade1</object-name>
+	 <object-name>blade2</object-name>
+	  <object-name>blade3</object-name>
+	   <object-name>blade4</object-name>
+	    <object-name>blade5</object-name>
+	</animation>
+
+	
+	
+	
+	 <animation>
+        <type>spin</type>
+        <object-name>rotorcomplete</object-name>
+		 
+        <property>rotors/main/rpm</property>
+	<factor>1</factor>
+        <center>
+           
+            <x-m> 0.00</x-m>
+            <y-m>-0.00</y-m>
+            <z-m> 1.685</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+	  
+        </axis>
+    </animation>
+	
+	
+	
+	
+	
+</PropertyList>
+
+
+

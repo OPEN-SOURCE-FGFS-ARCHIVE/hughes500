@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+  <name>md500-interior-glass</name>
+  <inherits-from>Effects/model-interior</inherits-from>
+  <parameters>
+	<texture n="4">
+	  <type>cubemap</type>
+	  <images>
+		 <positive-x>Aircraft/hughes500/Models/Effects/0004.png</positive-x>
+		 <negative-x>Aircraft/hughes500/Models/Effects/0002.png</negative-x>
+		 <positive-y>Aircraft/hughes500/Models/Effects/0001.png</positive-y>
+		 <negative-y>Aircraft/hughes500/Models/Effects/0003.png</negative-y>
+		 <positive-z>Aircraft/hughes500/Models/Effects/0006.png</positive-z>
+		 <negative-z>Aircraft/hughes500/Models/Effects/0005.png</negative-z>
+	  </images>
+	</texture>
+	<opacity-cube-center type="vec3d" n="0"> -0.909374 0.0 0.89472</opacity-cube-center>
+	<opacity-cube-scale type="vec3d" n="0"> 1.6 1.4 1.5</opacity-cube-scale>
+	<opacity-cube-angle type="float">0.0</opacity-cube-angle>
+  </parameters>
+</PropertyList>

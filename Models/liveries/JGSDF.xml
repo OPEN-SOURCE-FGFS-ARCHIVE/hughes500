@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Japanese Ground Self Defense Force</name>
+     <texture-fuselage>liveries/JGSDF/MD500_1_t.jpg</texture-fuselage>
+     <texture-tail>liveries/JGSDF/MD500_3_t.jpg</texture-tail>
+	 <texture-rotor>liveries/JGSDF/main rotor still.jpg</texture-rotor>
+	 <texture-tailrotor>liveries/JGSDF/tail rotor still.jpg</texture-tailrotor>
+     <texture-seat>liveries/JGSDF/Seat.jpg</texture-seat>
+	 <texture-skids>liveries/JGSDF/skids.jpg</texture-skids>
+	 <texture-dome>liveries/JGSDF/RotorDome_t.jpg</texture-dome>
+   
+
+      </livery>
+	   <bo105>
+	   <hdr>false</hdr>
+		<als>true</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.41</refl_correction>
+	<fresnel-factor>0.1</fresnel-factor>
+    </rendering>
+  </sim>
+
+</PropertyList>

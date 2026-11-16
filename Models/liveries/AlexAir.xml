@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Alex Air</name>
+     <texture-fuselage>liveries/AlexAir/MD500_1_t.jpg</texture-fuselage>
+     <texture-tail>liveries/AlexAir/MD500_3_t.jpg</texture-tail>
+	 <texture-rotor>liveries/AlexAir/main rotor still.jpg</texture-rotor>
+	 <texture-tailrotor>liveries/AlexAir/tail rotor still.jpg</texture-tailrotor>
+     <texture-seat>liveries/AlexAir/Seat.jpg</texture-seat>
+	 <texture-skids>liveries/AlexAir/skids.jpg</texture-skids>
+	 <texture-dome>liveries/AlexAir/RotorDome_t.jpg</texture-dome>
+   
+
+      </livery>
+	   <bo105>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.21</refl_correction>
+	<fresnel-factor>0.4</fresnel-factor>
+    </rendering>
+  </sim>
+
+</PropertyList>

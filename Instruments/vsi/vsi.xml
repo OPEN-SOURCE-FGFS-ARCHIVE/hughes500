@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>vsi.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name> 
+
+  
+  </animation>
+
+
+  
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>  
+     <condition>
+      <property>/controls/lighting/instrument-lights</property>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+      <interpolation>
+        <entry><ind> -2000 </ind><dep> -173.5 </dep></entry>
+        <entry><ind> -1500 </ind><dep> -131.5 </dep></entry>
+        <entry><ind> -1000 </ind><dep>  -81.5 </dep></entry>
+        <entry><ind>  -500 </ind><dep>  -35.3 </dep></entry>
+        <entry><ind>     0 </ind><dep>    0.0 </dep></entry>
+        <entry><ind>   500 </ind><dep>   35.7 </dep></entry>
+        <entry><ind>  1000 </ind><dep>   81.5 </dep></entry>
+        <entry><ind>  1500 </ind><dep>  131.0 </dep></entry>
+        <entry><ind>  2000 </ind><dep>  172.9 </dep></entry>
+      </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  
+  <!-- Coompositor lights-->
+  
+  <light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>0.03</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.8</r>
+      <g>0.5</g>
+      <b>0.5</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>5</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.05</range-m>
+   <intensity>0.18</intensity>
+  <dim-factor>
+    <property>controls/lighting/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+
+<animation>
+  <type>select</type>
+  <object-name>dash1</object-name>
+		
+  <condition>
+  <and>
+   <equals>
+    <property>controls/lighting/instrument-lights</property>
+    <value>true</value>
+   </equals>
+   <equals>
+    <property>controls/lighting/turn-off-lights</property>
+    <value>true</value>
+   </equals>
+   </and>
+  
+  </condition>
+ </animation>
+
+</PropertyList>
+
+

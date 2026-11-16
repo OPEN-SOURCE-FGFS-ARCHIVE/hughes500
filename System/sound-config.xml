@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <!-- Autopilot configuration for sounds -->
+
+    <!-- Wind in volume -->
+    <filter>
+        <name>wind-in-volume</name>
+        <type>gain</type>
+        <gain>1.0</gain>
+        <input>
+            <expression>
+                <product>
+                    <property>/sim/current-view/internal</property>
+                    <log10>
+                        <table>
+                            <property>/velocities/airspeed-kt</property>
+                            <entry><ind>  7.775374</ind><dep> 1            </dep></entry>
+                            <entry><ind> 70       </ind><dep> 1.77827941004</dep></entry>
+                            <entry><ind>140       </ind><dep>10            </dep></entry>
+                        </table>
+                    </log10>
+                </product>
+            </expression>
+        </input>
+        <output>
+            <property>/sounds/MD500E/environment/wind-in-volume</property>
+        </output>
+    </filter>
+
+    <!-- Wind pitch -->
+    <filter>
+        <name>wind-pitch</name>
+        <type>gain</type>
+        <gain>1.0</gain>
+        <input>
+            <expression>
+                <table>
+                    <property>/velocities/airspeed-kt</property>
+                    <entry><ind>  0</ind><dep>0.9</dep></entry>
+                    <entry><ind>120</ind><dep>1  </dep></entry>
+                </table>
+            </expression>
+        </input>
+        <output>
+            <property>/sounds/MD500E/environment/wind-pitch</property>
+        </output>
+    </filter>
+
+    <!-- Engine 0 volume -->
+    <filter>
+        <name>ground-idle-in-volume</name>
+        <type>gain</type>
+        <gain>1.0</gain>
+        <input>
+            <expression>
+                <product>
+                    <property>/sim/current-view/internal</property>
+                    <log10>
+                        <table>
+                            <property>/engines/engine[0]/n1-pct</property>
+                            <entry><ind> 0</ind><dep> 1</dep></entry>
+                            <entry><ind>30</ind><dep>10</dep></entry>
+                            <entry><ind>63</ind><dep>10</dep></entry>
+                            <entry><ind>97</ind><dep> 1</dep></entry>
+                        </table>
+                    </log10>
+                </product>
+            </expression>
+        </input>
+        <output>
+            <property>/sounds/MD500E/engines/engine0/ground-idle-in-volume</property>
+        </output>
+    </filter>
+
+    <filter>
+        <name>flight-idle-in-volume</name>
+        <type>gain</type>
+        <gain>1.0</gain>
+        <input>
+            <expression>
+                <product>
+                    <property>/sim/current-view/internal</property>
+                    <log10>
+                        <table>
+                            <property>/engines/engine[0]/n1-pct</property>
+                            <entry><ind>63</ind><dep> 1</dep></entry>
+                            <entry><ind>97</ind><dep>10</dep></entry>
+                        </table>
+                    </log10>
+                </product>
+            </expression>
+        </input>
+        <output>
+            <property>/sounds/MD500E/engines/engine0/flight-idle-in-volume</property>
+        </output>
+    </filter>
+
+    <!-- Engine 0 pitch -->
+    <filter>
+        <name>ground-idle-pitch</name>
+        <type>gain</type>
+        <gain>1.0</gain>
+        <input>
+            <expression>
+                <table>
+                    <property>/engines/engine[0]/n1-pct</property>
+                    <entry><ind> 0</ind><dep>0.75         </dep></entry>
+                    <entry><ind>63</ind><dep>1            </dep></entry>
+                    <entry><ind>97</ind><dep>1.53968253968</dep></entry>
+                </table>
+            </expression>
+        </input>
+        <output>
+            <property>/sounds/MD500E/engines/engine0/ground-idle-pitch</property>
+        </output>
+    </filter>
+
+    <filter>
+        <name>flight-idle-pitch</name>
+        <type>gain</type>
+        <gain>1.0</gain>
+        <input>
+            <expression>
+                <table>
+                    <property>/engines/engine[0]/n1-pct</property>
+                    <entry><ind> 0</ind><dep>0</dep></entry>
+                    <entry><ind>97</ind><dep>1</dep></entry>
+                </table>
+            </expression>
+        </input>
+        <output>
+            <property>/sounds/MD500E/engines/engine0/flight-idle-pitch</property>
+        </output>
+    </filter>
+
+    <!-- Blade vortex interaction -->
+    <filter>
+        <name>IGE-in-volume</name>
+        <type>gain</type>
+        <gain>1.0</gain>
+        <input>
+            <expression>
+                <product>
+                    <property>/sounds/MD500E/rotors/main/rotor-in-volume</property>
+                    <log10>
+                        <table>
+                            <property>/position/gear-agl-m</property>
+                            <entry><ind> 0  </ind><dep>10</dep></entry>
+                            <entry><ind>8.05</ind><dep> 1</dep></entry>
+                        </table>
+                    </log10>
+                </product>
+            </expression>
+        </input>
+        <output>
+            <property>/sounds/MD500E/rotors/main/IGE-in-volume</property>
+        </output>
+    </filter>
+    <filter>
+        <name>OGE-in-volume</name>
+        <type>gain</type>
+        <gain>1.0</gain>
+        <input>
+            <expression>
+                <product>
+                    <property>/sounds/MD500E/rotors/main/rotor-in-volume</property>
+                    <log10>
+                        <table>
+                            <property>/position/gear-agl-m</property>
+                            <entry><ind> 0  </ind><dep> 1</dep></entry>
+                            <entry><ind>8.05</ind><dep>10</dep></entry>
+                        </table>
+                    </log10>
+                </product>
+            </expression>
+        </input>
+        <output>
+            <property>/sounds/MD500E/rotors/main/OGE-in-volume</property>
+        </output>
+    </filter>
+
+    <filter>
+        <type>moving-average</type>
+        <samples>60</samples>
+        <input>/rotors/main/blade[0]/flap-deg</input>
+        <output>/rotors/main/blade[0]/avg-flap-deg</output>
+    </filter>
+    <filter>
+        <type>moving-average</type>
+        <samples>30</samples>
+        <input>/rotors/main/blade[0]/incidence-deg</input>
+        <output>/rotors/main/blade[0]/avg-incidence-deg</output>
+    </filter>
+    <filter>
+        <type>moving-average</type>
+        <samples>60</samples>
+        <input>/rotors/main/blade[2]/flap-deg</input>
+        <output>/rotors/main/blade[2]/avg-flap-deg</output>
+    </filter>
+    <filter>
+        <type>moving-average</type>
+        <samples>30</samples>
+        <input>/rotors/main/blade[2]/incidence-deg</input>
+        <output>/rotors/main/blade[2]/avg-incidence-deg</output>
+    </filter>
+
+    <filter>
+        <type>gain</type>
+        <gain>0.5</gain>
+        <input>
+            <expression>
+                <sum>
+                    <!-- Blade 0 in ground effect -->
+                    <product>
+                        <table>
+                            <property>/rotors/main/blade[0]/avg-flap-deg</property>
+                            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+                            <entry><ind>0.8</ind><dep>1.0</dep></entry>
+                        </table>
+                        <table>
+                            <property>/rotors/main/blade[0]/avg-incidence-deg</property>
+                            <entry><ind> 0.0</ind><dep>0.0</dep></entry>
+                            <entry><ind>13.0</ind><dep>1.0</dep></entry>
+                        </table>
+                        <table>
+                            <property>/position/gear-agl-m</property>
+                            <entry><ind> 0.0</ind><dep>1.0</dep></entry>
+                            <entry><ind>8.05</ind><dep>0.0</dep></entry>
+                        </table>
+                        <table>
+                            <property>/velocities/airspeed-kt</property>
+                            <entry><ind> 0  </ind><dep>1.0</dep> </entry>
+                            <entry><ind>30.0</ind><dep>0.0</dep></entry>
+                        </table>
+                    </product>
+                    <!-- Blade 0 out of ground effect -->
+                    <product>
+                        <table>
+                            <property>/rotors/main/blade[0]/avg-flap-deg</property>
+                            <entry><ind>0.6</ind><dep>0.0</dep></entry>
+                            <entry><ind>1.1</ind><dep>1.0</dep></entry>
+                        </table>
+                        <table>
+                            <property>/rotors/main/blade[0]/avg-incidence-deg</property>
+                            <entry><ind> 0.0</ind><dep>0.0</dep></entry>
+                            <entry><ind>13.0</ind><dep>1.0</dep></entry>
+                        </table>
+                        <table>
+                            <property>/position/gear-agl-m</property>
+                            <entry><ind> 0.0</ind><dep>0.0</dep></entry>
+                            <entry><ind>8.05</ind><dep>1.0</dep></entry>
+                        </table>
+                        <table>
+                            <property>/velocities/airspeed-kt</property>
+                            <entry><ind> 0  </ind><dep>0.0</dep></entry>
+                            <entry><ind>30.0</ind><dep>1.0</dep></entry>
+                            <entry><ind>60.0</ind><dep>1.0</dep></entry>
+                            <entry><ind>90.0</ind><dep>0.0</dep></entry>
+                        </table>
+                    </product>
+                    <!-- Blade 2 in ground effect -->
+                    <product>
+                        <table>
+                            <property>/rotors/main/blade[2]/avg-flap-deg</property>
+                            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+                            <entry><ind>0.8</ind><dep>1.0</dep></entry>
+                        </table>
+                        <table>
+                            <property>/rotors/main/blade[2]/avg-incidence-deg</property>
+                            <entry><ind> 0.0</ind><dep>0.0</dep></entry>
+                            <entry><ind>13.0</ind><dep>1.0</dep></entry>
+                        </table>
+                        <table>
+                            <property>/position/gear-agl-m</property>
+                            <entry><ind> 0.0</ind><dep>1.0</dep></entry>
+                            <entry><ind>8.05</ind><dep>0.0</dep></entry>
+                        </table>
+                        <table>
+                            <property>/velocities/airspeed-kt</property>
+                            <entry><ind> 0  </ind><dep>1.0</dep></entry>
+                            <entry><ind>30.0</ind><dep>0.0</dep></entry>
+                        </table>
+                    </product>
+                    <!-- Blade 2 out of ground effect -->
+                    <product>
+                        <table>
+                            <property>/rotors/main/blade[2]/avg-flap-deg</property>
+                            <entry><ind>0.6</ind><dep>0.0</dep></entry>
+                            <entry><ind>1.1</ind><dep>1.0</dep></entry>
+                        </table>
+                        <table>
+                            <property>/rotors/main/blade[2]/avg-incidence-deg</property>
+                            <entry><ind> 0.0</ind><dep>0.0</dep></entry>
+                            <entry><ind>13.0</ind><dep>1.0</dep></entry>
+                        </table>
+                        <table>
+                            <property>/position/gear-agl-m</property>
+                            <entry><ind> 0.0</ind><dep>0.0</dep></entry>
+                            <entry><ind>8.05</ind><dep>1.0</dep></entry>
+                        </table>
+                        <table>
+                            <property>/velocities/airspeed-kt</property>
+                            <entry><ind> 0  </ind><dep>0.0</dep></entry>
+                            <entry><ind>30.0</ind><dep>1.0</dep></entry>
+                            <entry><ind>60.0</ind><dep>1.0</dep></entry>
+                            <entry><ind>90.0</ind><dep>0.0</dep></entry>
+                        </table>
+                    </product>
+                </sum>
+            </expression>
+        </input>
+        <output>
+            <property>/sounds/MD500E/rotors/main/blade-vortex-interaction</property>
+        </output>
+    </filter>
+
+    <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+        <input>
+            <expression>
+                <table>
+                    <property>/sounds/MD500E/rotors/main/blade-vortex-interaction</property>
+                    <entry><ind>0.0</ind><dep>1.0</dep></entry>
+                    <entry><ind>1.0</ind><dep>0.0</dep></entry>
+                </table>
+            </expression>
+        </input>
+        <output>
+            <property>/sounds/MD500E/rotors/main/no-blade-vortex-interaction</property>
+        </output>
+    </filter>
+
+    <!-- Main rotor volume -->
+    <filter>
+        <name>rotor-in-volume</name>
+        <type>gain</type>
+        <gain>1.0</gain>
+        <input>
+            <expression>
+                <product>
+                    <property>/sim/current-view/internal</property>
+                    <property>/sounds/MD500E/rotors/main/no-blade-vortex-interaction</property>
+                    <log10>
+                        <table>
+                            <property>/rotors/main/rpm</property>
+                            <entry><ind>  9.48998418436</ind><dep> 1</dep></entry>    <!-- The sound is audible when the tip of the blade moves at 4 m/s -->
+                            <entry><ind>542            </ind><dep>10</dep></entry>
+                        </table>
+                    </log10>
+                </product>
+            </expression>
+        </input>
+        <output>
+            <property>/sounds/MD500E/rotors/main/rotor-in-volume</property>
+        </output>
+    </filter>
+
+    <!-- Main rotor pitch -->
+    <filter>
+        <name>rotor-pitch</name>
+        <type>gain</type>
+        <gain>1.0</gain>
+        <input>
+            <expression>
+                <table>
+                    <property>/rotors/main/rpm</property>
+                    <entry><ind>  0</ind><dep>0</dep></entry>
+                    <entry><ind>542</ind><dep>1</dep></entry>
+                </table>
+            </expression>
+        </input>
+        <output>
+            <property>/sounds/MD500E/rotors/main/rotor-pitch</property>
+        </output>
+    </filter>
+
+</PropertyList>

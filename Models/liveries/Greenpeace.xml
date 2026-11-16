@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Greenpeace</name>
+     <texture-fuselage>liveries/Greenpeace/MD500_1_t.jpg</texture-fuselage>
+     <texture-tail>liveries/Greenpeace/MD500_3_t.jpg</texture-tail>
+	 <texture-rotor>liveries/Greenpeace/main rotor still.jpg</texture-rotor>
+	 <texture-tailrotor>liveries/Greenpeace/tail rotor still.jpg</texture-tailrotor>
+     <texture-seat>liveries/Greenpeace/Seat.jpg</texture-seat>
+	 <texture-skids>liveries/Greenpeace/skids.jpg</texture-skids>
+	 <texture-dome>liveries/Greenpeace/RotorDome_t.jpg</texture-dome>
+  
+
+      </livery>
+	   <bo105>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.26</refl_correction>
+	<fresnel-factor>0.4</fresnel-factor>
+    </rendering>
+  </sim>
+
+</PropertyList>

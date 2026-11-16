@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<model>
+		<name>floatstrigger</name>
+		<path>Aircraft/hughes500/Models/kit/Floats/Float-switch/FloatToggle.xml</path>
+		<offsets>
+			<x-m>-1.45</x-m>
+			<y-m>-0.17</y-m>
+			<z-m>0.3</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+			<animation>
+		<type>select</type>
+		
+		<object-name>floatstrigger</object-name>
+			<condition>
+		
+		<equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>Floatation_System</value>
+	</equals>
+	
+	</condition>
+	</animation>
+	
+
+	<model>
+		<name>yawstring</name>
+		<path>Aircraft/hughes500/Instruments/woolthread/woolthread.xml</path>
+		<offsets>
+			<x-m>-1.7</x-m>
+			<y-m>0</y-m>
+			<z-m>0.8815</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>-40</pitch-deg>
+		</offsets>
+	</model>
+
+	
+	<model>
+		
+		<path>Aircraft/hughes500/Instruments/oat/oat.xml</path>
+		<offsets>
+			<x-m>-1.5</x-m>
+			<y-m>-0.004</y-m>
+			<z-m>0.95</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>55</pitch-deg>
+		</offsets>
+	</model>
+	
+
+<!-- panel-->
+
+<model>
+
+		<name>panel</name>
+
+		<path>Aircraft/hughes500/Models/Interior/panel.xml</path>
+
+		<offsets>
+
+
+			<x-m>0</x-m>
+
+			<y-m>0</y-m>
+
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+	 <!-- panel vibration experiment -->
+ <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+   <condition>
+				<greater-than>
+					<property>sim/sound/vibration</property>
+					<value>0.01</value>
+				</greater-than>
+			</condition>
+    <factor>0.09</factor>
+    <axis>
+      <x> 1 </x>
+      <y> 1 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+    <property>rotors/main/vibration/longitudinal</property>
+    <factor>0.009</factor>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+   <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+    <property>rotors/main/vibration/lateral</property>
+    <factor>0.01</factor>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  <!--  <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+    <property>/orientation/yaw-rate-degps</property>
+    <factor>-0.0013</factor>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>-->
+
+	<!-- sticks n stuff -->
+
+
+ <model>
+
+		<name>collective1</name>
+
+		<path>Aircraft/hughes500/Models/Interior/sticks/collective.xml</path>
+
+		<offsets>
+
+
+			<x-m>-0.87</x-m>
+
+			<y-m>-0.59</y-m>
+
+			<z-m>0.165</z-m>
+			<pitch-deg>0</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+	
+
+	
+	
+	 <model>
+
+		<name>cyclic1</name>
+
+		<path>Aircraft/hughes500/Models/Interior/sticks/cyclic.xml</path>
+
+		<offsets>
+
+
+			<x-m>-1.2</x-m>
+
+			<y-m>-0.3</y-m>
+
+			<z-m>-0.11</z-m>
+			<pitch-deg>0</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+	
+	
+	
+	 <model>
+
+		<name>pedals1</name>
+
+		<path>Aircraft/hughes500/Models/Interior/sticks/pedals.xml</path>
+
+		<offsets>
+
+
+			<x-m>-1.55</x-m>
+
+			<y-m>-0.34</y-m>
+
+			<z-m>-0.16</z-m>
+			<pitch-deg>0</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+	
+</PropertyList>
+
+
+

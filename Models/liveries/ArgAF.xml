@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Argentinian Air Force</name>
+     <texture-fuselage>liveries/ArgAF/MD500_1_t.jpg</texture-fuselage>
+     <texture-tail>liveries/ArgAF/MD500_3_t.jpg</texture-tail>
+	 <texture-rotor>liveries/ArgAF/main rotor still.jpg</texture-rotor>
+	 <texture-tailrotor>liveries/ArgAF/tail rotor still.jpg</texture-tailrotor>
+     <texture-seat>liveries/ArgAF/Seat.jpg</texture-seat>
+	 <texture-skids>liveries/ArgAF/skids.jpg</texture-skids>
+	 <texture-dome>liveries/ArgAF/RotorDome_t.jpg</texture-dome>
+  
+
+      </livery>
+	   <bo105>
+	   <hdr>false</hdr>
+		<als>true</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.41</refl_correction>
+	<fresnel-factor>0.1</fresnel-factor>
+    </rendering>
+  </sim>
+
+</PropertyList>

@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+<path>instr_n1.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<object-name>needle</object-name>
+		<object-name>needle.001</object-name>
+		
+		 <condition>
+      <property>/controls/lighting/instrument-lights</property>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<object-name>needle</object-name>
+		<object-name>needle.001</object-name>
+		<object-name>shadow</object-name>
+		
+		 <condition>
+      <property>/controls/lighting/instrument-lights</property>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+	</animation>	
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>shadow</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>shadow</object-name>
+  </effect>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>/engines/engine/n1-pct</property>
+	 <factor>2.68</factor>
+		<axis>
+		  <x>-1</x>
+		  <y>0</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+
+	<animation> 
+		<type>rotate</type>
+		<object-name>needle.001</object-name>
+		<property>/engines/engine/n1-pct</property>
+    <factor>268</factor>
+		<center>   
+		  <x-m> 0 </x-m> 
+		  <y-m>-0.00278 </y-m>
+			<z-m> 0.0108 </z-m>
+		</center>
+		<axis> 
+		  <x> -1 </x>
+		  <y>  0 </y>
+		  <z>  0 </z>
+		</axis>
+	</animation>
+	
+	
+	<!-- Coompositor lights-->
+  
+  <light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>0.03</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.8</r>
+      <g>0.5</g>
+      <b>0.5</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>15</spot-exponent>
+  <spot-cutoff>50</spot-cutoff>
+  <range-m>0.05</range-m>
+   <intensity>0.18</intensity>
+  <dim-factor>
+    <property>controls/lighting/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+
+<animation>
+  <type>select</type>
+  <object-name>dash1</object-name>
+		
+  <condition>
+  <and>
+   <equals>
+    <property>controls/lighting/instrument-lights</property>
+    <value>true</value>
+   </equals>
+   <equals>
+    <property>controls/lighting/turn-off-lights</property>
+    <value>true</value>
+   </equals>
+   </and>
+  
+  </condition>
+ </animation>
+
+</PropertyList>

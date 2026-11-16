@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+<path>kevin.ac</path>
+
+ 
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>500</max-m>
+    </animation>
+
+	
+	
+	
+  <animation>
+    <name>head1</name>
+	<object-name>hair2</object-name>
+    <object-name>headset1</object-name>
+	<object-name>headset2</object-name>
+    <object-name>headset3</object-name>
+    <object-name>headset4</object-name>
+<object-name>headset3</object-name>
+<object-name>head</object-name>
+<object-name>POLY.006</object-name>
+<object-name>eyes</object-name>
+<object-name>POLY.008</object-name>
+<object-name>lips</object-name>
+
+
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>head1</object-name>
+    
+    <property>controls/flight/elevator</property>
+    <factor> -15 </factor> 
+    <center>
+      <x-m>0 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m>0 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 1.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>head1</object-name>
+  
+    <property>controls/flight/rudder</property>
+    <factor>-25</factor>
+    <center>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 0.000 </y>
+      <z> 1.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+     <object-name>head1</object-name>
+   
+    <property>controls/flight/aileron</property>
+    <factor> -10.0</factor>
+    <center>
+      <x-m> 0.074 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m>0 </z-m>
+    </center>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation> 
+
+<effect>
+   <inherits-from>Aircraft/hughes500/Models/Effects/md500-interior</inherits-from>
+     
+     <object-name>hair2</object-name>
+     <object-name>headset1</object-name>
+     <object-name>headset2</object-name>
+     <object-name>headset3</object-name>
+     <object-name>headset4</object-name>
+    
+     <object-name>head</object-name>
+     
+     <object-name>eyes</object-name>
+     
+     <object-name>lips</object-name>
+
+<object-name>hair</object-name>
+<object-name>POLY.004</object-name>
+<object-name>POLY.006</object-name>
+<object-name>POLY.008</object-name>
+
+<object-name>POLY.010</object-name>
+<object-name>POLY.019</object-name>
+<object-name>POLY.023</object-name>
+<object-name>POLY.024</object-name>
+<object-name>POLY.025</object-name>
+<object-name>POLY.029</object-name>
+
+<object-name>POLY.030</object-name>
+<object-name>POLY.031</object-name>
+<object-name>POLY.033</object-name>
+
+		   
+ </effect>
+	
+	
+</PropertyList>
+

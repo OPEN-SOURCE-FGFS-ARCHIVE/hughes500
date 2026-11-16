@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Polk County (FLA) Sheriffs Office</name>
+     <texture-fuselage>liveries/PCSO/MD500_1_t.jpg</texture-fuselage>
+     <texture-tail>liveries/PCSO/MD500_3_t.jpg</texture-tail>
+	 <texture-rotor>liveries/PCSO/main rotor still.jpg</texture-rotor>
+	 <texture-tailrotor>liveries/PCSO/tail rotor still.jpg</texture-tailrotor>
+     <texture-seat>liveries/PCSO/Seat.jpg</texture-seat>
+	 <texture-skids>liveries/PCSO/skids.jpg</texture-skids>
+	 <texture-dome>liveries/PCSO/RotorDome_t.jpg</texture-dome>
+  
+
+      </livery>
+	   <bo105>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.24</refl_correction>
+	<fresnel-factor>0.4</fresnel-factor>
+    </rendering>
+  </sim>
+
+</PropertyList>

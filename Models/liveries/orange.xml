@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Orange</name>
+     <texture-fuselage>liveries/orange/MD500_1_t.jpg</texture-fuselage>
+     <texture-tail>liveries/orange/MD500_3_t.jpg</texture-tail>
+	 <texture-rotor>liveries/orange/main rotor still.jpg</texture-rotor>
+	 <texture-tailrotor>liveries/orange/tail rotor still.jpg</texture-tailrotor>
+     <texture-seat>liveries/orange/Seat.jpg</texture-seat>
+	 <texture-skids>liveries/orange/skids.jpg</texture-skids>
+	 <texture-dome>liveries/orange/RotorDome_t.jpg</texture-dome>
+  
+
+      </livery>
+	   <bo105>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.27</refl_correction>
+	<fresnel-factor>0.4</fresnel-factor>
+    </rendering>
+  </sim>
+
+</PropertyList>

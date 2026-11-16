@@ -1,0 +1,27 @@
+To use this effect, copy the files to your Aircrafts Models/Effects folder.
+Edit reflect-uber.eff to point the paths of the .png files to your aircrafts folder
+
+Add the following lines to your Aircraft set.xml:-
+
+<rendering>
+    
+<refl_correction type="string">-0.3</refl_correction>
+    <!-- edit this to alter the strength of the reflection -->
+</rendering>
+
+This needs to go before the </sim> tags in your set file. 
+
+Add the following to your aircraft model.xml:-
+
+<effect>
+    
+<inherits-from>Aircraft/AS350/Models/Effects/reflect-uber</inherits-from>
+
+<object-name>FUSELAGE PART HERE</object-name> <!-- edit the <object-name> fields to contain all the fuselage parts that are to be included in the reflection -->
+<object-name>FUSELAGE PART HERE</object-name>
+	
+<object-name>FUSELAGE PART HERE</object-name>
+	 
+<object-name>FUSELAGE PART HERE</object-name>
+  
+</effect>	

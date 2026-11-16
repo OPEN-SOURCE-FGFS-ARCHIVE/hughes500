@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>500</max-m>
+    </animation>
+
+<model>
+		<name>Pylons</name>
+		<path>Aircraft/hughes500/Models/payload/pylons.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
+
+
+ 
+
+  <model>
+		<name>Basic Airframe</name>
+		<path>Aircraft/hughes500/Models/payload/basic.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Basic Airframe</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Basic Airframe</value>
+        </equals>
+       
+    </condition>
+  </animation>
+ 
+
+ <model>
+		<name>Floatation_System</name>
+		<path>Aircraft/hughes500/Models/kit/Floats/Floats.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Floatation_System</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Floatation_System</value>
+        </equals>
+       
+    </condition>
+  </animation>
+
+  
+  <animation>
+  <type>select</type>
+  <object-name>pylon.C</object-name>  
+  <condition>
+  <or>
+   
+  
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>Basic Airframe</value>
+   </equals>
+   
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>Floatation_System</value>
+   </equals>
+   
+  
+   
+  </or>
+  </condition>
+ </animation>
+ 
+
+
+
+</PropertyList>

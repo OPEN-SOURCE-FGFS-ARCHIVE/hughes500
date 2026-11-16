@@ -1,0 +1,145 @@
+<!--emergency float -->
+
+<PropertyList>
+<!-- Packed floats -->
+<model>
+  <path>Aircraft/hughes500/Models/kit/Floats/short-packed.xml</path>
+  <offsets>
+   <x-m> -1.6 </x-m>
+   <y-m> -1.15 </y-m>
+   <z-m> -1.3 </z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+ </model>
+
+<model>
+  <path>Aircraft/hughes500/Models/kit/Floats/short-packed.xml</path>
+  <offsets>
+   <x-m> -1.6 </x-m>
+   <y-m> 1.15 </y-m>
+   <z-m> -1.3 </z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+ </model>
+ 
+ 
+  <model>
+  <path>Aircraft/hughes500/Models/kit/Floats/long-packed.xml</path>
+  <offsets>
+  <x-m> -0.3 </x-m>
+   <y-m> -1.15 </y-m>
+   <z-m> -1.27 </z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/hughes500/Models/kit/Floats/long-packed.xml</path>
+  <offsets>
+   <x-m> -0.3 </x-m>
+   <y-m> 1.15 </y-m>
+   <z-m> -1.27 </z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+ </model>
+ 
+ 
+ <model>
+  <path>Aircraft/hughes500/Models/kit/Floats/long-packed.xml</path>
+  <offsets>
+   <x-m> 1.55 </x-m>
+   <y-m> 1.15 </y-m>
+   <z-m> -1.1 </z-m>
+   <pitch-deg>-7.6</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/hughes500/Models/kit/Floats/long-packed.xml</path>
+  <offsets>
+   <x-m> 1.55 </x-m>
+   <y-m> -1.15 </y-m>
+   <z-m> -1.1 </z-m>
+   <pitch-deg>-7.6</pitch-deg>
+  </offsets>
+ </model>
+ 
+
+<!-- unpacked floats -->
+ <model>
+  <path>Aircraft/hughes500/Models/kit/Floats/float_small.xml</path>
+  <offsets>
+    <x-m> -1.6 </x-m>
+   <y-m> -1.15 </y-m>
+   <z-m> -1.3 </z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/hughes500/Models/kit/Floats/float_long.xml</path>
+  <offsets>
+ <x-m> -0.3 </x-m>
+   <y-m> -1.15 </y-m>
+   <z-m> -1.27 </z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/hughes500/Models/kit/Floats/float_long.xml</path>
+  <offsets>
+ <x-m> 1.55 </x-m>
+   <y-m> -1.15 </y-m>
+   <z-m> -1.1 </z-m>
+   <pitch-deg>-7.6</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/hughes500/Models/kit/Floats/float_small.xml</path>
+  <offsets>
+   <x-m> -1.6 </x-m>
+   <y-m> 1.15 </y-m>
+   <z-m> -1.3 </z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/hughes500/Models/kit/Floats/float_long.xml</path>
+  <offsets>
+ <x-m> -0.3 </x-m>
+   <y-m> 1.15 </y-m>
+   <z-m> -1.27 </z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/hughes500/Models/kit/Floats/float_long.xml</path>
+  <offsets>
+   <x-m> 1.55 </x-m>
+   <y-m> 1.15 </y-m>
+   <z-m> -1.1 </z-m>
+   <pitch-deg>-7.6</pitch-deg>
+  </offsets>
+ </model> 
+
+ <!-- Extended skids -->
+ <model>
+  <path>Aircraft/hughes500/Models/kit/Floats/longskid.xml</path>
+  <offsets>
+   <x-m> 1.45 </x-m>
+   <y-m> -1.15 </y-m>
+   <z-m> -1.17 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model> 
+
+ 
+ <model>
+  <path>Aircraft/hughes500/Models/kit/Floats/longskid.xml</path>
+  <offsets>
+   <x-m> 1.45 </x-m>
+   <y-m> 1.15 </y-m>
+   <z-m> -1.17 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model> 
+</PropertyList>

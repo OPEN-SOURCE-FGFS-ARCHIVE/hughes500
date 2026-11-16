@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+		<path>blade1.ac</path>
+		
+		
+	
+<!--  REMBRANDT support for transparent objects-->
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <condition>
+            <property>sim/rendering/rembrandt/enabled</property>
+        </condition>
+		
+        <object-name>blade1-0</object-name>
+        <object-name>blade1-1</object-name>
+        <object-name>blade1-2</object-name>
+        <object-name>blade1-3</object-name>
+	   	
+		 <object-name>blurred2</object-name>
+		 <object-name>blurred2a</object-name>
+		 <object-name>blurred2b</object-name>
+		 <object-name>blurred2c</object-name>
+		 <object-name>blurred2d</object-name>
+		 
+    </effect> 
+
+    <animation>
+	<type>material</type>
+	 <object-name>blade1-0</object-name>
+        <object-name>blade1-1</object-name>
+        <object-name>blade1-2</object-name>
+        <object-name>blade1-3</object-name>
+	   
+		<global type="bool">true</global>
+		<transparency>
+			<alpha-prop>rotors/main/rpm</alpha-prop>
+			<factor>-0.0045</factor>
+			<offset>1</offset>
+			<max>1</max>
+		</transparency>
+    </animation>
+
+	
+	<animation>
+        <name>blade-1</name>
+		<object-name>mount1</object-name>
+        <object-name>blade1-0</object-name>
+        <object-name>blade1-1</object-name>
+        <object-name>blade1-2</object-name>
+        <object-name>blade1-3</object-name>
+		 <object-name>blurred2</object-name>
+		 <object-name>blurred2a</object-name>
+		 <object-name>blurred2b</object-name>
+		 <object-name>blurred2c</object-name>
+		 <object-name>blurred2d</object-name>
+    </animation>
+
+    
+	
+	
+	
+	
+	 <animation>
+        <type>rotate</type>
+		
+       <object-name>blade-1</object-name>
+		
+        <property>rotors/main/tilt/pitch-deg</property>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0.151</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+	
+	 
+	
+	
+	 <animation>
+        <type>select</type>
+        <object-name>blade1-0</object-name>
+        <object-name>blade1-1</object-name>
+        <object-name>blade1-2</object-name>
+        <object-name>blade1-3</object-name>
+        <condition>
+            <less-than>
+                <property>rotors/main/rpm</property>
+                <value>201</value>
+            </less-than>
+        </condition>
+    </animation>
+	
+	 <animation>
+        <type>select</type>
+      <object-name>blurred2</object-name>
+		 <object-name>blurred2a</object-name>
+		 <object-name>blurred2b</object-name>
+		 <object-name>blurred2c</object-name>
+		 <object-name>blurred2d</object-name>
+        <condition>
+            <greater-than>
+                <property>rotors/main/rpm</property>
+                <value>200.999</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+	
+	<!--  Blade 1-->
+
+   
+
+    <animation>
+        <type>rotate</type>
+        <object-name>blade-1</object-name>
+        <property>rotors/main/blade[2]/incidence-deg</property>
+	<factor>1</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+             <z-m>1.685</z-m>
+        </center>
+        <axis>
+            <x>1.0</x>
+            <y>-0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+	
+    <animation>
+        <type>rotate</type>
+        <object-name>blade1-1</object-name>
+        <object-name>blade1-2</object-name>
+        <object-name>blade1-3</object-name>
+        <property>rotors/main/blade[2]/flap-deg</property>
+        <factor>0.15</factor>
+        <center>
+            <x-m>1.37</x-m>
+            <y-m>0.075</y-m>
+            <z-m>1.685</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+	
+    <animation>
+        <type>rotate</type>
+        <object-name>blade1-2</object-name>
+        <object-name>blade1-3</object-name>
+        <property>rotors/main/blade[2]/flap-deg</property>
+        <factor>0.2</factor>
+        <center>
+             <x-m>2.26</x-m>
+             <y-m>0.075</y-m>
+              <z-m>1.685</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+	
+	<animation>
+        <type>rotate</type>
+        
+        <object-name>blade1-3</object-name>
+        <property>rotors/main/blade[2]/flap-deg</property>
+        <factor>0.25</factor>
+        <center>
+            <x-m>3.155</x-m>
+            <y-m>0.075</y-m>
+            <z-m>1.685</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+	
+	
+	
+	
+</PropertyList>
+
+
+

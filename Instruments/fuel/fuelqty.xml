@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>fuelqty.ac</path>
+	
+	<!--effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<condition>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		</condition>
+		<object-name>face</object-name> 
+		<object-name>needle</object-name> 
+	</effect-->
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.0175</red>
+            <green>0.0175</green>
+            <blue>0.0175</blue>
+    </emission>
+  </animation>
+	
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/consumables/fuel/tank/level-lbs</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep> -118 </dep></entry>
+      <entry><ind>  88 </ind><dep>  -60 </dep></entry>
+      <entry><ind> 220 </ind><dep>   -8 </dep></entry>
+      <entry><ind> 330 </ind><dep>   32 </dep></entry>
+      <entry><ind> 440 </ind><dep>   78 </dep></entry>
+      <entry><ind> 660 </ind><dep>  142 </dep></entry>
+      <entry><ind> 770 </ind><dep>  172 </dep></entry>
+      <entry><ind> 801 </ind><dep>  190 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+	
+		
+
+</PropertyList>
+
